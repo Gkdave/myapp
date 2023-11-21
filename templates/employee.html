@@ -1,0 +1,11 @@
+<h1 style="text-align:center">Employee Management </h1>
+{% for e in emps %}
+<h2>
+    
+<td>{{ forloop.counter }}.</td>
+<td>{{ e.name }}</td> <br>
+</tr>
+</h2>
+
+{% endfor %}
+

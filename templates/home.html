@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page </title>
+</head>
+<body>
+
+    <div class="container" style="text-align:center:">
+        {% include 'navbar.html' %}
+        <h1>Welcome to our Website</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="checkbox" name="check">
+            <input type="text" name="name">
+            <button>Send</button>
+        </form>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nemo tenetur velit, provident expedita quibusdam mollitia fuga deleniti consectetur cupiditate, minus doloribus nisi!</p>
+
+    </div>
+    {% if isActive %}
+    <div>
+    <h2>Today date is :- {{ date }}</h2>
+
+    <h1> Name is : {{ name }}</h1>
+    <hr>
+    <h1> Student data </h1>
+    <h2> Student name: {{ student_data.student_name }}</h2>
+    <h2>student college: {{ student_data.student_college }}</h2>
+    <h2>student city: {{ student_data.student_city }}</h2>
+
+
+    <hr>
+
+    <h1>Favorate Programms </h1>
+    {% for p in list_of_programs %}
+    
+    <h3>{{p}}</h3>
+    {% endfor %} 
+    {% endif %}
+    </div>
+   
+</body>
+</html>
