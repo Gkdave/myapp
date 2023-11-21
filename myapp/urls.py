@@ -9,5 +9,5 @@ urlpatterns = [
     path('index/',home),
     path('about/',about),
     path('services/',services),
-    path("",include('emp.urls'))
+    path("emp/",include('emp.urls'))
 ]
