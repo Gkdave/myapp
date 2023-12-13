@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Emp , Testimonial 
+from .models import Emp , Testimonial ,Feedback
 # Register your models here.
 
 class EmpAdmin(admin.ModelAdmin):
@@ -14,5 +14,6 @@ class EmpAdmin(admin.ModelAdmin):
     
 admin.site.register(Emp)
 admin.site.register(Testimonial)
+admin.site.register(Feedback)
 
 

@@ -1,5 +1,5 @@
 from django import forms
-from  .models import Emp
+from  .models import Emp,Feedback 
 
 class FeedbackForm(forms.Form):
     email=forms.EmailField(label="Enter your email", max_length=100)
@@ -15,3 +15,9 @@ class EmpForm(forms.ModelForm):
     class Meta:
         model=Emp
         fields = ['name','emp_id','phone','address']
+        
+        
+class FeedbackForm(forms.ModelForm):
+    class Meta:
+        model=Feedback
+        fields=['email','name','feedback']

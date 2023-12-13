@@ -17,7 +17,7 @@ def add_emp(request):
         emp_id = request.POST.get('emp_id')
         emp_phone = request.POST.get('emp_phone')
         emp_address = request.POST.get("emp_address")
-        # emp_working = request.POST.get('emp_working')
+        emp_working = request.POST.get('emp_working')
         emp_department = request.POST.get("emp_department")
         
         
@@ -30,7 +30,7 @@ def add_emp(request):
         e.emp_id = emp_id
         e.phone = emp_phone
         e.address = emp_address
-        e.working = emp_working
+        e.working=emp_working
         e.department = emp_department
         
         if emp_working is None:
@@ -69,12 +69,15 @@ def do_update_emp(request, emp_id):
         emp_department = request.POST.get("emp_department")
         
         e=Emp.objects.get(pk=emp_id)
+        print(emp_id_temp)
+        print(emp_name)
         e.name = emp_name
-        e.emp_id = emp_id
+        e.emp_id = emp_id_temp 
         e.phone = emp_phone
         e.address = emp_address
         # e.working = emp_working
         e.department= emp_department
+        print(e.name)
         if emp_working is None:
             e.working=False
         else:
@@ -100,8 +103,9 @@ def feedback(request):
             print(form.cleaned_data['name'])
             print(form.cleaned_data['feedback'])
             print("data saved")
+            form.save()
             
-        else:
+     
             return render(request,'emp/feedback.html',{
                 'form':form
             })

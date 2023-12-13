@@ -5,7 +5,7 @@ from .views import *
 from django.conf import settings
 from django.conf.urls.static import static 
 
-admin.site.site_header = "Dave "
+admin.site.site_header = "Dave Webdevelopment"
 admin.site.index_title = "Welcome to Dave Website"
 admin.site.site_title = "Welcome to Tutorial"
 

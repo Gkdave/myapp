@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <div class="container" style="text-align:center:">
+    <div class="container" style="text-align:center;">
         {% include 'navbar.html' %}
         <h1>Welcome to our Website</h1>
         <form action="" method="post">
@@ -19,7 +19,7 @@
 
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem nemo tenetur velit, provident expedita quibusdam mollitia fuga deleniti consectetur cupiditate, minus doloribus nisi!</p>
 
-    </div>
+    
     {% if isActive %}
     <div>
     <h2>Today date is :- {{ date }}</h2>
@@ -41,6 +41,7 @@
     {% endfor %} 
     {% endif %}
     </div>
+</div>
    
 </body>
 </html>
