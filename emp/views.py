@@ -104,7 +104,8 @@ def feedback(request):
             print(form.cleaned_data['feedback'])
             print("data saved")
             form.save()
-            
+            form=FeedbackForm()           
+             
      
             return render(request,'emp/feedback.html',{
                 'form':form
